@@ -33,32 +33,45 @@ visibility: hidden;
 opacity: 0;
 transition: visibility 0s 2s, opacity 2s linear;
 }
+#sun{
+    position: absolute;
+    left:47%;
+}
 svg{
     fill:red;
     width: 100px;
     height: auto;
-    position: absolute;
-    left: 50%;
-    top:70%;
 }
 .water{
     width: 100%;
     height:auto;
-    bottom: -160px;
+    top:68%;
     z-index: 100;
 }
 .boat{
     width: 200px;
     height: auto;
     left: 10%;
-    top:63%;
+    top:55%;
     transform: scale(-1, 1);
+    transition-duration: 3s;
+    transition-property: left;
+    transition-timing-function: ease-out;
+}
+.boat:hover{
+    left: 70%;
 }
 .kraken{
     width: 100px;
     height: auto;
     left: 80%;
-    top:78%;
+    top:63%;
+    transition-property: top;
+    transition-duration: 0.5s;
+    transition-delay: 2s;
+}
+.boat:hover + .kraken{
+    top:60%;
 }
 .plane{
     width: 200px;
